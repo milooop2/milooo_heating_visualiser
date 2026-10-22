@@ -75,15 +75,15 @@ nieaktywna - 00ff99
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="2.0000001"
-     inkscape:cx="1430.7499"
-     inkscape:cy="318.24998"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="1489.5204"
+     inkscape:cy="669.27655"
      inkscape:window-width="1920"
      inkscape:window-height="1009"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g37"
+     inkscape:current-layer="PumpSpeed-sensor"
      showgrid="false" />
   <defs
      id="defs1">
@@ -1539,7 +1539,7 @@ nieaktywna - 00ff99
                transform="translate(-174.94735,-366.48242)"
                id="pipe-temp-sensor-sign">
               <path
-                 d="M 208.83979,512.94924 163.42692,465.23712"
+                 d="m 208.83979,512.94924 -37.2225,-61.04935"
                  class="thin"
                  id="pressure-switch-signA-3"
                  style="display:inline;fill:none;stroke:#334155;stroke-width:1.38301;stroke-linecap:round;stroke-linejoin:round"
@@ -2114,13 +2114,13 @@ nieaktywna - 00ff99
                  transform="translate(-140.53161,-113.17899)">
                 <text
                    class="OutdoorUnit-text  OutdoorUnit-label"
-                   x="87.568359"
-                   y="179.97487"
+                   x="137.62523"
+                   y="172.31656"
                    id="pipe-temp-sensor-label">Pipe Temp. Sensor</text>
                 <text
                    class="OutdoorUnit-text  OutdoorUnit-data"
-                   x="86.031296"
-                   y="205.44893"
+                   x="136.08817"
+                   y="197.79062"
                    id="pipe-temp-sensor-data">Temp. data</text>
               </g>
               <g
@@ -2222,14 +2222,14 @@ nieaktywna - 00ff99
                  transform="translate(-7.6825472e-7,23.44775)">
                 <text
                    class="OutdoorUnit-text  outdoorUnit-label"
-                   x="118.92416"
-                   y="59.106308"
+                   x="121.38953"
+                   y="78.956375"
                    text-anchor="middle"
                    id="expansion-valve-label">Expansion Valve</text>
                 <text
                    class="OutdoorUnit-text  outdoorUnit-data"
-                   x="118.21919"
-                   y="74.949333"
+                   x="120.68457"
+                   y="94.7994"
                    text-anchor="middle"
                    id="expansion-valve-data">Valve</text>
               </g>
@@ -4453,6 +4453,21 @@ nieaktywna - 00ff99
            class="IndoorUnit-text  IndoorUnit-label">water flow</text>
       </g>
       <g
+         id="PumpSpeed-sensor"
+         style="display:inline"
+         transform="translate(355.77719,534.14986)">
+        <text
+           class="IndoorUnit-text IndoorUnit-data"
+           x="344.13785"
+           y="263.40265"
+           id="PumpSpeed-label">Speed pump label</text>
+        <text
+           x="349.80762"
+           y="237.69115"
+           id="PumpSpeed-data"
+           class="IndoorUnit-text  IndoorUnit-label">Speed Pump data</text>
+      </g>
+      <g
          id="indoor-refignant-temp-sensor">
         <text
            class="IndoorUnit-text IndoorUnit-data"
@@ -4520,8 +4535,7 @@ nieaktywna - 00ff99
     </g>
     <g
        id="g2"
-       inkscape:label="Data Sign-mark"
-       sodipodi:insensitive="true">
+       inkscape:label="Data Sign-mark">
       <g
          id="water-flow-sign"
          style="display:inline"
@@ -4576,6 +4590,25 @@ nieaktywna - 00ff99
            stroke="#334155"
            stroke-width="4.72789"
            id="circle48-6-5-5-3"
+           rx="11.386762"
+           ry="12.269009" />
+      </g>
+      <g
+         id="PumpSpeed-sign"
+         style="display:inline"
+         transform="translate(496.21464,378.08747)">
+        <path
+           d="m 180.09247,455.42386 5,-50"
+           id="path48-8-6-2-1-2-1"
+           style="fill:none;stroke:#334155;stroke-width:1.88202;stroke-linecap:round;stroke-linejoin:round"
+           sodipodi:nodetypes="cc" />
+        <ellipse
+           cx="176.47923"
+           cy="465.42386"
+           fill="#f8fafc"
+           stroke="#334155"
+           stroke-width="4.72789"
+           id="circle48-6-5-5-3-5"
            rx="11.386762"
            ry="12.269009" />
       </g>

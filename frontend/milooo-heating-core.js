@@ -7,9 +7,9 @@ import { FanAnimator } from "./fan.js";
 import { RefrigerantAnimator } from "./refrigerant.js";
 import { HeatExchangerColorizer } from "./heat_exchanger.js";
 
-const WS_TYPE = "milooo-heating-visualiser/get_config";
-const SVG_BASE = "/milooo-heating-visualiser/frontend/";
-const SVG_CACHE_BUST = "?v=27";
+const WS_TYPE = "milooo_heating_visualiser/get_config";
+const SVG_BASE = "/milooo_heating_visualiser/frontend/";
+const SVG_CACHE_BUST = "?v=28";
 
 // Mapowanie: urządzenie → ID grup RYSUNKU (ukrywane, gdy urządzenie nie dodane)
 const DEVICE_DRAWINGS = {
@@ -145,8 +145,12 @@ export class MiloooHeatingCore {
         if (labelEl) {
           const labelSource = this._mapping["label_source"] || "HA";
           if (labelSource === "HA") {
-            const friendlyName = stateObj.attributes.friendly_name || stateObj.entity_id;
-            labelEl.textContent = friendlyName;
+            // Opcja 1: Użyj friendly_name (długie, z prefiksem)
+            labelEl.textContent = stateObj.attributes.friendly_name || stateObj.entity_id;
+          } else if (labelSource === "name") {
+            // Opcja 2: Użyj samej nazwy encji (np. "fan_1_speed")
+            const entityName = entityId.split(".")[1]; // np. "fan_1_speed"
+            labelEl.textContent = entityName;
           }
 
           const hideField = meta.hide_label_field;

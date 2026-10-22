@@ -67,7 +67,7 @@ def async_register_websocket_api(hass: HomeAssistant) -> None:
 
 @websocket_api.websocket_command(
     {
-        vol.Required("type"): "milooo-heating-visualiser/get_config",
+        vol.Required("type"): "milooo_heating_visualiser/get_config",
     }
 )
 @websocket_api.async_response

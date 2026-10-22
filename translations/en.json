@@ -120,7 +120,8 @@
                 "weather_sunrise": "Sunrise",
                 "weather_sunset": "Sunset",
                 "weather_condition": "Weather condition (state)",
-                "weather_precipitation_rate": "Precipitation rate (mm/h)"
+                "weather_precipitation_rate": "Precipitation rate (mm/h)",
+                "dhw_target_temp": "DHW target temperature"
               }
             },
             "animations": {
@@ -129,7 +130,8 @@
                 "outdoor_fan_animation_enabled": "Fan animation",
                 "hp_2way_valve_state": "2-way valve state",
                 "hp_pump_duty": "Circulation pump duty",
-                "hp_defrosting_state": "Defrost routine"
+                "hp_defrosting_state": "Defrost routine",
+                "hp_pump_speed": "Speed pump"
               }
             }
           }
@@ -213,7 +215,8 @@
                 "weather_sunrise": "Sunrise",
                 "weather_sunset": "Sunset",
                 "weather_condition": "Weather condition (state)",
-                "weather_precipitation_rate": "Precipitation rate (mm/h)"
+                "weather_precipitation_rate": "Precipitation rate (mm/h)",
+                "dhw_target_temp": "DHW target temperature"
               }
             },
             "animations": {
@@ -222,7 +225,8 @@
                 "outdoor_fan_animation_enabled": "Fan animation",
                 "hp_2way_valve_state": "2-way valve state",
                 "hp_pump_duty": "Circulation pump duty",
-                "hp_defrosting_state": "Defrost routine"
+                "hp_defrosting_state": "Defrost routine",
+                "hp_pump_speed": "Pump speed"
               }
             }
           }

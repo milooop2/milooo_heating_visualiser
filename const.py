@@ -27,7 +27,7 @@ SVG_FIELDS = {
         "input_type": "choice",
         "device": "global",
         "label_key": "label_source",
-        "options": ["HA", "svg"],
+        "options": ["HA", "svg", "name"],
         "default": "HA",
     },
 
@@ -81,7 +81,7 @@ SVG_FIELDS = {
     "hp_3way_valve":        {"input_type": "entity", "device": "heat_pump_indoor", "label_key": "hp_3way_valve",        "group_id": "3-way-valve-direction", "label_id": "3-way-valve-direction-label", "data_id": "3-way-valve-direction-data", "sign_id": "3-way-valve-direction-sign", "hide_label_field": "indoor_labels_visible", "hide_sign_field": "indoor_signs_visible", "device_class": None},
     
     # --- Indoor: Animacje ---
-    "hp_pump_speed": {"input_type": "entity", "device": "heat_pump_indoor", "label_key": "hp_pump_speed", "group_id": None, "label_id": None, "data_id": None, "sign_id": None, "device_class": "frequency"},
+    "hp_pump_speed": {"input_type": "entity", "device": "heat_pump_indoor", "label_key": "hp_pump_speed", "group_id": "PumpSpeed-sensor", "label_id": "PumpSpeed-label", "data_id": "PumpSpeed-data", "sign_id": "PumpSpeed-sign", "hide_label_field": "indoor_labels_visible", "hide_sign_field": "indoor_signs_visible", "device_class": "frequency"},
 
     # ============================================================
     # STREFY
@@ -96,7 +96,8 @@ SVG_FIELDS = {
     # ============================================================
     "dhw_labels_visible": {"input_type": "boolean", "device": "dhw", "label_key": "dhw_labels_visible", "default": True},
     "dhw_signs_visible":  {"input_type": "boolean", "device": "dhw", "label_key": "dhw_signs_visible",  "default": True},
-    "dhw_temp":           {"input_type": "entity",  "device": "dhw", "label_key": "dhw_temp", "group_id": "DHW", "label_id": None, "data_id": "text  dhw-data", "sign_id": None, "hide_label_field": None, "hide_sign_field": None, "device_class": "temperature"},
+    "dhw_temp":           {"input_type": "entity",  "device": "dhw", "label_key": "dhw_temp", "group_id": "DHW", "label_id": "dhw-temp-label", "data_id": "dhw-temp-data", "sign_id": None, "hide_label_field": "dhw_labels_visible", "hide_sign_field": None, "device_class": "temperature"},
+    "dhw_target_temp":    {"input_type": "entity",  "device": "dhw", "label_key": "dhw_target_temp", "group_id": "DHW", "label_id": "dhw-target-temp-label", "data_id": "dhw-target-temp-data", "sign_id": None, "hide_label_field": "dhw_labels_visible", "hide_sign_field": None, "device_class": "temperature"},
 
     # ============================================================
     # POGODA

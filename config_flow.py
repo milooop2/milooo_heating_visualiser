@@ -35,10 +35,10 @@ DEVICE_SECTIONS = {
             "hp_hex_outlet_temp", "hp_indoor_ref_temp", "hp_3way_valve"
         ]},
         {"id": "visibility", "fields": ["indoor_labels_visible", "indoor_signs_visible", "zone_labels_visible", "zone_signs_visible", "label_source"]},
-        {"id": "animations", "fields": ["hp_water_flow", "hp_pump_speed"]},
+        {"id": "animations", "fields": ["hp_pump_speed"]},
     ],
     "dhw": [
-        {"id": "data", "fields": ["dhw_temp"]},
+        {"id": "data", "fields": ["dhw_temp", "dhw_target_temp"]},
         {"id": "visibility", "fields": ["dhw_labels_visible", "dhw_signs_visible"]},
     ],
     "zone_1": [
@@ -87,11 +87,24 @@ def _build_field(field_id: str, current: dict):
     kwargs = {}
     if suggested:
         kwargs["description"] = {"suggested_value": suggested}
+    
+    # Bazowa konfiguracja selektora
+    entity_config = {
+        "domain": ["sensor", "binary_sensor", "input_number", "number", "input_boolean", "switch", "weather"]
+    }
+    
+    # Bezpieczne filtrowanie po device_class:
+    # Stosujemy TYLKO jeśli device_class jest zdefiniowany i nie jest to None.
+    device_class = meta.get("device_class")
+    
+    if device_class is not None:
+        # Opcjonalnie: nie filtrujemy po device_class dla domeny weather (bo encje pogodowe nie mają device_class)
+        # Ale w tym przypadku device_class jest zdefiniowany, więc raczej nie dotyczy to weather.
+        entity_config["device_class"] = [device_class]
+
     return (
         selector.EntitySelector(
-            selector.EntitySelectorConfig(
-                domain=["sensor", "binary_sensor", "input_number", "input_boolean", "switch", "weather"]
-            )
+            selector.EntitySelectorConfig(**entity_config)
         ),
         kwargs,
     )

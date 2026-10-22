@@ -120,7 +120,8 @@
                 "weather_sunrise": "Wschód słońca",
                 "weather_sunset": "Zachód słońca",
                 "weather_condition": "Stan pogody (condition)",
-                "weather_precipitation_rate": "Intensywność opadów (mm/h)"
+                "weather_precipitation_rate": "Intensywność opadów (mm/h)",
+                "dhw_target_temp": "Temperatura zadana CWU"
               }
             },
             "animations": {
@@ -129,7 +130,8 @@
                 "outdoor_fan_animation_enabled": "Animacja wentylatorów",
                 "hp_2way_valve_state": "Stan zaworu 2-drogowego",
                 "hp_pump_duty": "Praca pompy obiegowej",
-                "hp_defrosting_state": "Defrost (switch)"
+                "hp_defrosting_state": "Defrost (switch)",
+                "hp_pump_speed": "Prędkość pompy obiegowej"
               }
             }
           }
@@ -213,7 +215,8 @@
                 "weather_sunrise": "Wschód słońca",
                 "weather_sunset": "Zachód słońca",
                 "weather_condition": "Stan pogody (condition)",
-                "weather_precipitation_rate": "Intensywność opadów (mm/h)"
+                "weather_precipitation_rate": "Intensywność opadów (mm/h)",
+                "dhw_target_temp": "Temperatura zadana CWU"
               }
             },
             "animations": {
@@ -222,7 +225,8 @@
                 "outdoor_fan_animation_enabled": "Animacja wentylatorów",
                 "hp_2way_valve_state": "Stan zaworu 2-drogowego",
                 "hp_pump_duty": "Praca pompy obiegowej",
-                "hp_defrosting_state": "Defrost (switch)"
+                "hp_defrosting_state": "Defrost (switch)",
+                "hp_pump_speed": "Prędkość pompy obiegowej"
               }
             }
           }
