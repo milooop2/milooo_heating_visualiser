@@ -1,0 +1,233 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Milooo Heating Visualiser",
+        "description": "Skonfiguruj integrację."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Integracja jest już skonfigurowana."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Mapowanie encji",
+        "description": "Przypisz encje Home Assistant do pól w SVG."
+      }
+    }
+  },
+  "device": {
+    "device_heat_pump_outdoor": "Pompa ciepła (Outdoor)",
+    "device_heat_pump_indoor": "Pompa ciepła (Indoor)",
+    "device_dhw": "Zasobnik CWU",
+    "device_zone_1": "Strefa 1",
+    "device_zone_2": "Strefa 2",
+    "device_weather": "Pogoda"
+  },
+  "device_desc": {
+    "device_heat_pump_outdoor": "Jednostka zewnętrzna pompy ciepła.",
+    "device_heat_pump_indoor": "Jednostka wewnętrzna pompy ciepła.",
+    "device_dhw": "Zbiornik ciepłej wody użytkowej.",
+    "device_zone_1": "Obieg grzewczy strefy 1.",
+    "device_zone_2": "Obieg grzewczy strefy 2.",
+    "device_weather": "Dane pogodowe i animacje."
+  },
+  "config_subentries": {
+    "device": {
+      "step": {
+        "user": {
+          "title": "Wybierz urządzenie",
+          "description": "Wybierz urządzenie, które chcesz dodać lub skonfigurować."
+        },
+        "configure": {
+          "title": "Konfiguracja urządzenia",
+          "description": "Wypełnij pola dla tego urządzenia.",
+          "sections": {
+            "outdoor_sensors": {
+              "name": "Czujniki (jednostka zewnętrzna)",
+              "data": {
+                "hp_ambient_temp": "Temperatura zewnętrzna",
+                "hp_defrost": "Czujnik odszraniania",
+                "hp_high_pressure": "Wysokie ciśnienie",
+                "hp_low_pressure": "Niskie ciśnienie",
+                "hp_eva_exit_temp": "Temperatura wyjścia parownika",
+                "hp_ipm_temp": "Temperatura IPM",
+                "hp_pipe_temp": "Temperatura rury",
+                "hp_comp_discharge_temp": "Temperatura tłoczenia sprężarki",
+                "hp_comp_tank_temp": "Temperatura zbiornika sprężarki",
+                "hp_fan1_speed": "Prędkość wentylatora 1",
+                "hp_fan2_speed": "Prędkość wentylatora 2",
+                "hp_comp_freq": "Częstotliwość sprężarki",
+                "hp_comp_current": "Prąd sprężarki",
+                "hp_cop": "COP",
+                "hp_bypass_exit_temp": "Temperatura wyjścia bypassu"
+              }
+            },
+            "outdoor_valves": {
+              "name": "Zawory (jednostka zewnętrzna)",
+              "data": {
+                "hp_2way_valve": "Zawór 2-drogowy",
+                "hp_4way_valve": "Zawór 4-drogowy",
+                "hp_expansion_valve": "Zawór rozprężny",
+                "hp_pressure_switch": "Presostat"
+              }
+            },
+            "indoor_sensors": {
+              "name": "Czujniki (jednostka wewnętrzna)",
+              "data": {
+                "hp_water_flow": "Przepływ wody",
+                "hp_inlet_water_temp": "Temperatura wody na wejściu",
+                "hp_outlet_water_temp": "Temperatura wody na wyjściu",
+                "hp_hex_outlet_temp": "Temperatura wyjścia wymiennika",
+                "hp_indoor_ref_temp": "Temperatura czynnika (wewnątrz)",
+                "hp_3way_valve": "Kierunek zaworu 3-drogowego"
+              }
+            },
+            "visibility": {
+              "name": "Widoczność etykiet",
+              "data": {
+                "outdoor_labels_visible": "Pokaż etykiety jednostki zewnętrznej",
+                "indoor_labels_visible": "Pokaż etykiety jednostki wewnętrznej",
+                "zone_labels_visible": "Pokaż etykiety stref",
+                "dhw_labels_visible": "Pokaż etykiety CWU",
+                "weather_labels_visible": "Pokaż etykiety pogody",
+                "outdoor_signs_visible": "Pokaż odnośniki (outdoor)",
+                "indoor_signs_visible": "Pokaż odnośniki (indoor)",
+                "zone_signs_visible": "Pokaż odnośniki (strefy)",
+                "dhw_signs_visible": "Pokaż odnośniki (CWU)",
+                "weather_signs_visible": "Pokaż odnośniki (pogoda)",
+                "label_source": "Źródło etykiet",
+                "weather_animation_enabled": "Animacja słońca/księżyca",
+                "weather_precipitation_enabled": "Animacja opadów (deszcz/śnieg)",
+                "weather_daynight_background_enabled": "Tło dzień/noc"
+              }
+            },
+            "data": {
+              "name": "Dane",
+              "data": {
+                "dhw_temp": "Temperatura CWU",
+                "zone1_temp": "Temperatura Strefy 1",
+                "zone1_target_temp": "Temperatura zadana Strefy 1",
+                "zone2_temp": "Temperatura Strefy 2",
+                "zone2_target_temp": "Temperatura zadana Strefy 2",
+                "weather_rain": "Opady",
+                "weather_pressure": "Ciśnienie",
+                "weather_wind_direction": "Kierunek wiatru",
+                "weather_wind_speed": "Prędkość wiatru",
+                "weather_humidity": "Wilgotność",
+                "weather_sunrise": "Wschód słońca",
+                "weather_sunset": "Zachód słońca",
+                "weather_condition": "Stan pogody (condition)",
+                "weather_precipitation_rate": "Intensywność opadów (mm/h)"
+              }
+            },
+            "animations": {
+              "name": "Animacje",
+              "data": {
+                "outdoor_fan_animation_enabled": "Animacja wentylatorów",
+                "hp_2way_valve_state": "Stan zaworu 2-drogowego",
+                "hp_pump_duty": "Praca pompy obiegowej",
+                "hp_defrosting_state": "Defrost (switch)"
+              }
+            }
+          }
+        },
+        "reconfigure": {
+          "title": "Rekonfiguracja urządzenia",
+          "description": "Wypełnij pola dla tego urządzenia.",
+          "sections": {
+            "outdoor_sensors": {
+              "name": "Czujniki (jednostka zewnętrzna)",
+              "data": {
+                "hp_ambient_temp": "Temperatura zewnętrzna",
+                "hp_defrost": "Czujnik odszraniania",
+                "hp_high_pressure": "Wysokie ciśnienie",
+                "hp_low_pressure": "Niskie ciśnienie",
+                "hp_eva_exit_temp": "Temperatura wyjścia parownika",
+                "hp_ipm_temp": "Temperatura IPM",
+                "hp_pipe_temp": "Temperatura rury",
+                "hp_comp_discharge_temp": "Temperatura tłoczenia sprężarki",
+                "hp_comp_tank_temp": "Temperatura zbiornika sprężarki",
+                "hp_fan1_speed": "Prędkość wentylatora 1",
+                "hp_fan2_speed": "Prędkość wentylatora 2",
+                "hp_comp_freq": "Częstotliwość sprężarki",
+                "hp_comp_current": "Prąd sprężarki",
+                "hp_cop": "COP",
+                "hp_bypass_exit_temp": "Temperatura wyjścia bypassu"
+              }
+            },
+            "outdoor_valves": {
+              "name": "Zawory (jednostka zewnętrzna)",
+              "data": {
+                "hp_2way_valve": "Zawór 2-drogowy",
+                "hp_4way_valve": "Zawór 4-drogowy",
+                "hp_expansion_valve": "Zawór rozprężny",
+                "hp_pressure_switch": "Presostat"
+              }
+            },
+            "indoor_sensors": {
+              "name": "Czujniki (jednostka wewnętrzna)",
+              "data": {
+                "hp_water_flow": "Przepływ wody",
+                "hp_inlet_water_temp": "Temperatura wody na wejściu",
+                "hp_outlet_water_temp": "Temperatura wody na wyjściu",
+                "hp_hex_outlet_temp": "Temperatura wyjścia wymiennika",
+                "hp_indoor_ref_temp": "Temperatura czynnika (wewnątrz)",
+                "hp_3way_valve": "Kierunek zaworu 3-drogowego"
+              }
+            },
+            "visibility": {
+              "name": "Widoczność etykiet",
+              "data": {
+                "outdoor_labels_visible": "Pokaż etykiety jednostki zewnętrznej",
+                "indoor_labels_visible": "Pokaż etykiety jednostki wewnętrznej",
+                "zone_labels_visible": "Pokaż etykiety stref",
+                "dhw_labels_visible": "Pokaż etykiety CWU",
+                "weather_labels_visible": "Pokaż etykiety pogody",
+                "outdoor_signs_visible": "Pokaż odnośniki (outdoor)",
+                "indoor_signs_visible": "Pokaż odnośniki (indoor)",
+                "zone_signs_visible": "Pokaż odnośniki (strefy)",
+                "dhw_signs_visible": "Pokaż odnośniki (CWU)",
+                "weather_signs_visible": "Pokaż odnośniki (pogoda)",
+                "label_source": "Źródło etykiet",
+                "weather_animation_enabled": "Animacja słońca/księżyca",
+                "weather_precipitation_enabled": "Animacja opadów (deszcz/śnieg)",
+                "weather_daynight_background_enabled": "Tło dzień/noc"
+              }
+            },
+            "data": {
+              "name": "Dane",
+              "data": {
+                "dhw_temp": "Temperatura CWU",
+                "zone1_temp": "Temperatura Strefy 1",
+                "zone1_target_temp": "Temperatura zadana Strefy 1",
+                "zone2_temp": "Temperatura Strefy 2",
+                "zone2_target_temp": "Temperatura zadana Strefy 2",
+                "weather_rain": "Opady",
+                "weather_pressure": "Ciśnienie",
+                "weather_wind_direction": "Kierunek wiatru",
+                "weather_wind_speed": "Prędkość wiatru",
+                "weather_humidity": "Wilgotność",
+                "weather_sunrise": "Wschód słońca",
+                "weather_sunset": "Zachód słońca",
+                "weather_condition": "Stan pogody (condition)",
+                "weather_precipitation_rate": "Intensywność opadów (mm/h)"
+              }
+            },
+            "animations": {
+              "name": "Animacje",
+              "data": {
+                "outdoor_fan_animation_enabled": "Animacja wentylatorów",
+                "hp_2way_valve_state": "Stan zaworu 2-drogowego",
+                "hp_pump_duty": "Praca pompy obiegowej",
+                "hp_defrosting_state": "Defrost (switch)"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

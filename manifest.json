@@ -1,0 +1,19 @@
+{
+  "domain": "milooo_heating_visualiser",
+  "name": "Milooo Heating Visualiser",
+  "version": "0.1.2",
+  "documentation": "https://github.com/milooop2/milooo_heating_visualiser",
+  "requirements": [],
+  "codeowners": ["@milooop2"],
+  "config_flow": true,
+  "integration_type": "service",
+  "iot_class": "local_push",
+  "dependencies": ["http", "frontend"],
+  "subentries": ["device"],
+  "frontend": {
+    "extra_module_url": [
+      "/milooo_heating_visualiser/frontend/formatters.js",
+      "/milooo_heating_visualiser/frontend/milooo-heating-core.js"
+    ]
+  }
+}

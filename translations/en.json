@@ -1,0 +1,233 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Milooo Heating Visualiser",
+        "description": "Configure the integration."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Integration is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Entity mapping",
+        "description": "Assign Home Assistant entities to SVG fields."
+      }
+    }
+  },
+  "device": {
+    "device_heat_pump_outdoor": "Heat pump (Outdoor)",
+    "device_heat_pump_indoor": "Heat pump (Indoor)",
+    "device_dhw": "DHW tank",
+    "device_zone_1": "Zone 1",
+    "device_zone_2": "Zone 2",
+    "device_weather": "Weather"
+  },
+  "device_desc": {
+    "device_heat_pump_outdoor": "Heat pump outdoor unit.",
+    "device_heat_pump_indoor": "Heat pump indoor unit.",
+    "device_dhw": "Domestic hot water tank.",
+    "device_zone_1": "Zone 1 heating circuit.",
+    "device_zone_2": "Zone 2 heating circuit.",
+    "device_weather": "Weather data and animations."
+  },
+  "config_subentries": {
+    "device": {
+      "step": {
+        "user": {
+          "title": "Choose device",
+          "description": "Choose a device you want to add or configure."
+        },
+        "configure": {
+          "title": "Device configuration",
+          "description": "Fill in fields for this device.",
+          "sections": {
+            "outdoor_sensors": {
+              "name": "Sensors (outdoor unit)",
+              "data": {
+                "hp_ambient_temp": "Ambient temperature",
+                "hp_defrost": "Defrost sensor",
+                "hp_high_pressure": "High pressure",
+                "hp_low_pressure": "Low pressure",
+                "hp_eva_exit_temp": "EVA exit temperature",
+                "hp_ipm_temp": "IPM temperature",
+                "hp_pipe_temp": "Pipe temperature",
+                "hp_comp_discharge_temp": "Compressor discharge temperature",
+                "hp_comp_tank_temp": "Compressor tank temperature",
+                "hp_fan1_speed": "Fan 1 speed",
+                "hp_fan2_speed": "Fan 2 speed",
+                "hp_comp_freq": "Compressor frequency",
+                "hp_comp_current": "Compressor current",
+                "hp_cop": "COP",
+                "hp_bypass_exit_temp": "Bypass Exit Temp."
+              }
+            },
+            "outdoor_valves": {
+              "name": "Valves (outdoor unit)",
+              "data": {
+                "hp_2way_valve": "2-way valve",
+                "hp_4way_valve": "4-way valve",
+                "hp_expansion_valve": "Expansion valve",
+                "hp_pressure_switch": "Pressure switch"
+              }
+            },
+            "indoor_sensors": {
+              "name": "Sensors (indoor unit)",
+              "data": {
+                "hp_water_flow": "Water flow",
+                "hp_inlet_water_temp": "Inlet water temperature",
+                "hp_outlet_water_temp": "Outlet water temperature",
+                "hp_hex_outlet_temp": "Hex outlet water temperature",
+                "hp_indoor_ref_temp": "Indoor refrigerant temperature",
+                "hp_3way_valve": "3-way valve direction"
+              }
+            },
+            "visibility": {
+              "name": "Label visibility",
+              "data": {
+                "outdoor_labels_visible": "Show outdoor unit labels",
+                "indoor_labels_visible": "Show indoor unit labels",
+                "zone_labels_visible": "Show zone labels",
+                "dhw_labels_visible": "Show DHW labels",
+                "weather_labels_visible": "Show weather labels",
+                "outdoor_signs_visible": "Show signs (outdoor)",
+                "indoor_signs_visible": "Show signs (indoor)",
+                "zone_signs_visible": "Show signs (zones)",
+                "dhw_signs_visible": "Show signs (DHW)",
+                "weather_signs_visible": "Show signs (weather)",
+                "label_source": "Label source",
+                "weather_animation_enabled": "Sun/Moon animation",
+                "weather_precipitation_enabled": "Rain/Snow animation",
+                "weather_daynight_background_enabled": "Day/Night background"
+              }
+            },
+            "data": {
+              "name": "Data",
+              "data": {
+                "dhw_temp": "DHW temperature",
+                "zone1_temp": "Zone 1 temperature",
+                "zone1_target_temp": "Zone 1 target temperature",
+                "zone2_temp": "Zone 2 temperature",
+                "zone2_target_temp": "Zone 2 target temperature",
+                "weather_rain": "Rain",
+                "weather_pressure": "Pressure",
+                "weather_wind_direction": "Wind direction",
+                "weather_wind_speed": "Wind speed",
+                "weather_humidity": "Humidity",
+                "weather_sunrise": "Sunrise",
+                "weather_sunset": "Sunset",
+                "weather_condition": "Weather condition (state)",
+                "weather_precipitation_rate": "Precipitation rate (mm/h)"
+              }
+            },
+            "animations": {
+              "name": "Animations",
+              "data": {
+                "outdoor_fan_animation_enabled": "Fan animation",
+                "hp_2way_valve_state": "2-way valve state",
+                "hp_pump_duty": "Circulation pump duty",
+                "hp_defrosting_state": "Defrost routine"
+              }
+            }
+          }
+        },
+        "reconfigure": {
+          "title": "Reconfigure device",
+          "description": "Fill in fields for this device.",
+          "sections": {
+            "outdoor_sensors": {
+              "name": "Sensors (outdoor unit)",
+              "data": {
+                "hp_ambient_temp": "Ambient temperature",
+                "hp_defrost": "Defrost sensor",
+                "hp_high_pressure": "High pressure",
+                "hp_low_pressure": "Low pressure",
+                "hp_eva_exit_temp": "EVA exit temperature",
+                "hp_ipm_temp": "IPM temperature",
+                "hp_pipe_temp": "Pipe temperature",
+                "hp_comp_discharge_temp": "Compressor discharge temperature",
+                "hp_comp_tank_temp": "Compressor tank temperature",
+                "hp_fan1_speed": "Fan 1 speed",
+                "hp_fan2_speed": "Fan 2 speed",
+                "hp_comp_freq": "Compressor frequency",
+                "hp_comp_current": "Compressor current",
+                "hp_cop": "COP",
+                "hp_bypass_exit_temp": "Bypass Exit Temp."
+              }
+            },
+            "outdoor_valves": {
+              "name": "Valves (outdoor unit)",
+              "data": {
+                "hp_2way_valve": "2-way valve",
+                "hp_4way_valve": "4-way valve",
+                "hp_expansion_valve": "Expansion valve",
+                "hp_pressure_switch": "Pressure switch"
+              }
+            },
+            "indoor_sensors": {
+              "name": "Sensors (indoor unit)",
+              "data": {
+                "hp_water_flow": "Water flow",
+                "hp_inlet_water_temp": "Inlet water temperature",
+                "hp_outlet_water_temp": "Outlet water temperature",
+                "hp_hex_outlet_temp": "Hex outlet water temperature",
+                "hp_indoor_ref_temp": "Indoor refrigerant temperature",
+                "hp_3way_valve": "3-way valve direction"
+              }
+            },
+            "visibility": {
+              "name": "Label visibility",
+              "data": {
+                "outdoor_labels_visible": "Show outdoor unit labels",
+                "indoor_labels_visible": "Show indoor unit labels",
+                "zone_labels_visible": "Show zone labels",
+                "dhw_labels_visible": "Show DHW labels",
+                "weather_labels_visible": "Show weather labels",
+                "outdoor_signs_visible": "Show signs (outdoor)",
+                "indoor_signs_visible": "Show signs (indoor)",
+                "zone_signs_visible": "Show signs (zones)",
+                "dhw_signs_visible": "Show signs (DHW)",
+                "weather_signs_visible": "Show signs (weather)",
+                "label_source": "Label source",
+                "weather_animation_enabled": "Sun/Moon animation",
+                "weather_precipitation_enabled": "Rain/Snow animation",
+                "weather_daynight_background_enabled": "Day/Night background"
+              }
+            },
+            "data": {
+              "name": "Data",
+              "data": {
+                "dhw_temp": "DHW temperature",
+                "zone1_temp": "Zone 1 temperature",
+                "zone1_target_temp": "Zone 1 target temperature",
+                "zone2_temp": "Zone 2 temperature",
+                "zone2_target_temp": "Zone 2 target temperature",
+                "weather_rain": "Rain",
+                "weather_pressure": "Pressure",
+                "weather_wind_direction": "Wind direction",
+                "weather_wind_speed": "Wind speed",
+                "weather_humidity": "Humidity",
+                "weather_sunrise": "Sunrise",
+                "weather_sunset": "Sunset",
+                "weather_condition": "Weather condition (state)",
+                "weather_precipitation_rate": "Precipitation rate (mm/h)"
+              }
+            },
+            "animations": {
+              "name": "Animations",
+              "data": {
+                "outdoor_fan_animation_enabled": "Fan animation",
+                "hp_2way_valve_state": "2-way valve state",
+                "hp_pump_duty": "Circulation pump duty",
+                "hp_defrosting_state": "Defrost routine"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
